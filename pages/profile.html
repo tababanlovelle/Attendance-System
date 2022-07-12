@@ -1,0 +1,207 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <link rel="icon"  href="../images/logo.png">
+    <style type="text/css">
+        @import "../css/navbar.css";
+        @import "../css/style.css";
+        
+    </style>
+    <script src='http://code.jquery.com/jquery-2.1.1.min.js'></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                document.getElementById("savebtn").style.display = "none";
+                document.getElementById("editbtn").style.display = "block";
+            });
+            function SwapDivsWithClick(div1,div2)
+            {
+               d1 = document.getElementById(div1);
+               d2 = document.getElementById(div2);
+               if( d2.style.display == "none" )
+               {
+                  d1.style.display = "none";
+                  d2.style.display = "block";
+               }
+               else
+               {
+                  d1.style.display = "block";
+                  d2.style.display = "none";
+               }
+            }
+            </script>
+            
+</head>
+<body>
+    <link rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+    <div class="wrapper">
+      <div class="sidebar">
+        <a href="dashboard.html"> <img src="../images/logo.png"> </a>
+        <h4 class="text-center profile text-secondary">Attendance System</h4>
+        <ul class="nav-links">
+          <li><a href="dashboard.html"><i class="fi fi-rr-dashboard align-middle"></i>Dashboard</a></li>
+          <li><a href="reports.html"><i class="fi fi-rr-form align-middle"></i>Reports</a></li>
+          <li class="active"><a href="profile.html" class="active align-middle"><i class="bi bi-person-square"></i>Profile</a></li>
+        </ul>
+        <div class="btn logout"><a data-toggle="modal" data-target="#logout"><i class="fi fi-rr-sign-out-alt align-middle"></i>Logout</a> </div>
+      </div>
+      <div class="main_content">
+        <div class="header">
+          <a href=""><img src="../images/menu-burger.png" class="burger-menu align-middle"></a>
+          <div class="top center profile float-right"> <img src="../images/user.png" class="userphoto rounded-circle border border-dark"> <span class="login head pr-3 pl-2 align-middle">John Doe</span> </div>
+        </div>
+        <div class="info">
+          <h3 class="text-uppercase prof">Profile</h3>
+          <div class="container profiles float-left"> <img src="../images/user.png" class="userphoto rounded-circle border border-0 shadow">
+            <br>
+            <br>
+            <br>
+            <button type="button" class="btn rounded buttonprof red">Change Photo</button>
+            <br>
+            <button type="button" class="btn rounded buttonprof white">Delete</button>
+          </div>
+          <div class="container sides float-right" id="editbtn">
+            <div class="container profinfo">
+              <div class="row">
+                <div class="col-md-10 mx-auto">
+                  <form>
+                    <div class="row"> <a href="javascript:SwapDivsWithClick('editbtn','savebtn')" class="edit" id="edit">Edit</a> </div>
+                    <div class="form-group row">
+                      <div class="col-sm-6">
+                        <label for="Firstname">First name</label>
+                        <input type="text" class="form-control editable" id="Firstname" placeholder="John" disabled> </div>
+                      <div class="col-sm-6">
+                        <label for="Lastname">Last name</label>
+                        <input type="text" class="form-control editable" id="Lastname" placeholder="Doe" disabled> </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-sm-6">
+                        <label for="email">Email Address</label>
+                        <input type="email" class="form-control editable" id="email" placeholder="johndoe@gmail.com" disabled> </div>
+                      <div class="col-sm-6">
+                        <label for="contactnumber">Contact Number</label>
+                        <input type="number" class="form-control editable" id="contactnumber" placeholder="" disabled> </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-sm-6">
+                        <label for="department">Department</label>
+                        <input type="text" class="form-control" id="department" placeholder="IT Department" disabled> </div>
+                      <div class="col-sm-6">
+                        <label for="JobTitle">Job Title</label>
+                        <input type="text" class="form-control" id="JobTitle" placeholder="Intern" disabled> </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-sm-6">
+                        <label for="NewPassword">New Password</label>
+                        <input type="password" class="form-control editable" id="NewPassword" placeholder="" disabled> </div>
+                      <div class="col-sm-6">
+                        <label for="ConfirmPassword">Confirm New Password</label>
+                        <input type="password" class="form-control editable" id="ConfirmPassword" placeholder="" disabled> </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-sm-6">
+                        <label for="CurrentPassword">Current Password</label>
+                        <input type="password" class="form-control editable" id="CurrentPassword" placeholder="" disabled> </div>
+                      <div class="col-sm-6"> </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container sides float-right" id="savebtn">
+            <div class="container profinfo">
+              <div class="row">
+                <div class="col-md-10 mx-auto">
+                  <form>
+                    <div class="form-group row">
+                      <div class="col-sm-6">
+                        <label for="Firstname">First name</label>
+                        <input type="text" class="form-control editable" id="Firstname" placeholder="John"> </div>
+                      <div class="col-sm-6">
+                        <label for="Lastname">Last name</label>
+                        <input type="text" class="form-control editable" id="Lastname" placeholder="Doe"> </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-sm-6">
+                        <label for="email">Email Address</label>
+                        <input type="email" class="form-control editable" id="email" placeholder="johndoe@gmail.com"> </div>
+                      <div class="col-sm-6">
+                        <label for="contactnumber">Contact Number</label>
+                        <input type="number" class="form-control editable" id="contactnumber" placeholder=""> </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-sm-6">
+                        <label for="department">Department</label>
+                        <input type="text" class="form-control" id="department" placeholder="IT Department" disabled> </div>
+                      <div class="col-sm-6">
+                        <label for="JobTitle">Job Title</label>
+                        <input type="text" class="form-control" id="JobTitle" placeholder="Intern" disabled> </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-sm-6">
+                        <label for="NewPassword">New Password</label>
+                        <input type="password" class="form-control editable" id="NewPassword" placeholder=""> </div>
+                      <div class="col-sm-6">
+                        <label for="ConfirmPassword">Confirm New Password</label>
+                        <input type="password" class="form-control editable" id="ConfirmPassword" placeholder=""> </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-sm-6">
+                        <label for="CurrentPassword">Current Password</label>
+                        <input type="password" class="form-control editable" id="CurrentPassword" placeholder=""> </div>
+                      <div class="col-sm-6"> </div>
+                    </div>
+                    <div class="btns float-right">
+                      <button href="dashboard.html" class="btn rounded buttonprof white">Cancel</button>
+                      <button href="javascript:SwapDivsWithClick('editbtn','savebtn')" class="btn rounded buttonprof red ml-2">Save Changes</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="logout" tabindex="-1" aria-labelledby="logoutLabel" aria-hidden="true">
+      <div class="modal-dialog-centered logouts">
+        <div class="modal-content">
+          <div class="mb-1">
+              <img src="../images/logo.png">
+              <span class="head align-middle pl-1">LOGOUT</span>
+          </div>
+          <div class="my-2 ml-2">
+            <p>Are you sure you want to sign out?</p>
+          </div>
+          <div>
+              <button href="" class="btn rounded buttonprof white" data-dismiss="modal">Cancel</button>
+              <button href=""  class="btn rounded buttonprof red ml-2">Logout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+<!--menu burger-->
+<script>
+  let sidebar = document.querySelector(".sidebar");
+  let sidebarBtn = document.querySelector(".bx-menu");
+  console.log(sidebarBtn);
+  sidebarBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("close");
+  });
+  </script>
+</body>
+</html>
